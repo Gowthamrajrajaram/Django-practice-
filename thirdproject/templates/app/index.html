@@ -1,0 +1,17 @@
+<!DOCTYPE html>  
+<html lang="en"> 
+    {% load static %}  
+<head>  
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>SMK TEX</title> 
+    <link rel="stylesheet"  type="text/css" href="{% static 'CSS/index.css' %}">
+
+</head>  
+<body>  
+<h2>Welcome to SMK TEX!!!</h2>  
+    <h3>{{display_date}}</h3>
+    <h2>SMK Tex ownername is {{ownername}}</h2>
+    <img src="{% static 'Images/tiger.jpg' %}" alt="tiger"height="300px" width="700px"/>
+</body>  
+</html>  

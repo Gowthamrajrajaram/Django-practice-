@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'app/index.html'  %}
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning CRUD</title>
+</head>
+<body>
+    <h1>Update Student details</h1>
+    <form method="POST">
+    Student Name<input type="text" name="stu_name" value="{{student.stu_name}}">
+    Student rollno<input type="text" name="stu_rollno" value="{{student.stu_rollno}}">
+    Student address<input type="text" name="stu_address" value="{{student.stu_address}}">
+    {% csrf_token%}
+    <input type="submit" value="Update student">
+    </form>
+</body>
+{% endblock %}
+</html>

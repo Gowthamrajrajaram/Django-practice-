@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'app/index.html'  %}
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning CRUD</title>
+</head>
+<body>
+    <h1>Student details</h1>
+    <table>
+        <thead>
+            <th>Student Name</th>
+            <th>Student RollNo</th>
+            <th>Student Address</th>
+        </thead>
+        <tr>
+        {% for stu in student %}
+        <td>{{stu.stu_name}}</td>
+        <td>{{stu.stu_rollno}}</td>
+        <td>{{stu.stu_address}}</td>
+        <td><a href='/update/{{stu.id}}'>Update</a>   <a href='/delete/{{stu.id}}'>Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    <a href="/create"><button type="button">Add new student</button></a>
+</body>
+{% endblock %}
+</html>
